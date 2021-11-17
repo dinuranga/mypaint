@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="title" content="My Paint">
+	<meta name="description" content="My paint is simple drawing app which is developed with html, css and javascript.">
+	<meta name="keywords" content="my paint,dinuranga,paint app,online paint,online drawing app">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="author" content="Maleesha Dinuranga">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Paint</title>
+</head>
+<body>
+    <div class="container">
+        <div class="controlsTop">
+            <a href="./index.html"><h3>My Paint</h3></a>
+            <div class="middleGroup">
+                <label for="getColor">Color</label>
+                <input type="color" id="getColor" value="#3c14ff" oninput="getColor()">
+                <label for="getBrushSize">Brush Size - <span id="showBrushSize">03</span></label>
+                <input type="range" id="getBrushSize" value="3" min="1" max="50" oninput="getBrushSize()">
+                <input type="button" id="clear" value="Clear">
+            </div>
+            <input type="button" class="saveBtn" id="saveBtn" value="Save Image" onclick="saveImage()">
+        </div>
+        <div class="colorPalette">
+            <input type="button" onclick="chooseColor('purple')" class="chooseColor" style="background-color: purple;" title="Purple">
+            <input type="button" onclick="chooseColor('blue')" class="chooseColor" style="background-color: blue;" title="Blue">
+            <input type="button" onclick="chooseColor('green')" class="chooseColor" style="background-color: green;" title="Green">
+            <input type="button" onclick="chooseColor('yellow')" class="chooseColor" style="background-color: yellow;" title="Yellw">
+            <input type="button" onclick="chooseColor('orange')" class="chooseColor" style="background-color: orange;" title="Orange">
+            <input type="button" onclick="chooseColor('red')" class="chooseColor" style="background-color: red;" title="Red">
+            <input type="button" onclick="chooseColor('#333')" class="chooseColor" style="background-color: #333;" title="Black">
+        </div>
+		<div class="controlsBottom">
+            <div class="middleGroup">
+                <label for="getColor">Color</label>
+                <input type="color" id="getColor" value="#3c14ff" oninput="getColor()">
+                <label for="getBrushSize">Brush Size - <span id="showBrushSize">03</span></label>
+                <input type="range" id="getBrushSize" value="3" min="1" max="50" oninput="getBrushSize()">
+                <input type="button" id="clear" value="Clear">
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
